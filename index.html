@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reddy Ganesh Poojari - IT Infrastructure Engineer, Windows Server Administrator and IT Support Specialist based in Ireland.">
+<title>Reddy Ganesh Poojari | IT Infrastructure Portfolio</title>
+
+<style>
+:root {
+  --bg:#081326;
+  --bg2:#0d1e35;
+  --panel:#122945;
+  --blue:#347cf5;
+  --cyan:#58b7ff;
+  --text:#f5f8ff;
+  --muted:#b7c6da;
+  --border:#29435f;
+  --gold:#ffca45;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+.container{width:90%;max-width:1160px;margin:auto}
+
+/* NAVIGATION */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+  background:rgba(6,17,36,.92);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+nav{
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+.logo span{color:var(--cyan)}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:23px;
+}
+.nav-links a{
+  font-size:13px;
+  font-weight:bold;
+  color:#c8d5e8;
+  transition:.3s;
+}
+.nav-links a:hover{color:var(--cyan)}
+.menu-btn{
+  display:none;
+  background:#17385d;
+  color:white;
+  border:1px solid var(--border);
+  padding:9px 14px;
+  border-radius:7px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:710px;
+  padding:145px 0 90px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 78% 35%,#174c80 0%,transparent 43%),
+    linear-gradient(110deg,#071225,#0d2340 60%,#081326);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      90deg,transparent 0 79px,rgba(100,170,255,.04) 80px
+    ),
+    repeating-linear-gradient(
+      0deg,transparent 0 79px,rgba(100,170,255,.035) 80px
+    );
+  pointer-events:none;
+}
+.hero-content{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:38px;
+  max-width:1050px;
+  margin:auto;
+}
+.profile-photo{
+  width:165px;
+  height:165px;
+  flex-shrink:0;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#54d1ed,#2868c7 65%,#102c58);
+  border:5px solid rgba(255,255,255,.2);
+  box-shadow:0 20px 55px #0008;
+  font-size:48px;
+  font-weight:900;
+  letter-spacing:-3px;
+}
+.eyebrow{
+  color:#82c7ff;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+.hero h1{
+  font-size:clamp(40px,6vw,68px);
+  line-height:1.1;
+  letter-spacing:-2px;
+  margin:12px 0;
+}
+.hero h1 span{color:#70b5ff}
+.role{
+  font-size:21px;
+  color:#72b5ff;
+  font-weight:bold;
+  margin:10px 0;
+}
+.hero-description{
+  max-width:760px;
+  color:#d0dced;
+  font-size:17px;
+}
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  background:var(--blue);
+  border:1px solid #4889ff;
+  border-radius:7px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.btn.white{
+  background:white;
+  color:#6843a7;
+  border-color:#c7a9ff;
+}
+.btn.gold{
+  background:transparent;
+  color:var(--gold);
+  border-color:#ae831e;
+}
+.work-status{
+  margin-top:20px;
+  color:#b9cce3;
+  font-size:13px;
+}
+
+/* COMMON SECTIONS */
+section{padding:85px 0;scroll-margin-top:75px}
+.alternate{background:#0c1c32}
+.section-label{
+  color:#66b9ff;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.section-title{
+  font-size:clamp(29px,4vw,40px);
+  letter-spacing:-1px;
+  margin:8px 0;
+}
+.section-description{
+  max-width:780px;
+  color:var(--muted);
+  margin:0 0 32px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.grid-two{grid-template-columns:repeat(2,1fr)}
+.card{
+  padding:24px;
+  background:linear-gradient(145deg,#142d4a,#0d2038);
+  border:1px solid var(--border);
+  border-radius:14px;
+  transition:.25s;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#438ad2;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+}
+.card p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+.card ul{
+  padding-left:20px;
+  color:var(--muted);
+  font-size:14px;
+}
+.card li{margin-bottom:8px}
+
+/* STATISTICS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.stat{
+  background:#0a1b32;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:18px;
+}
+.stat strong{
+  display:block;
+  font-size:25px;
+  color:#70baff;
+}
+.stat small{color:#bdcce0}
+
+/* SKILLS */
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+.skill-card{
+  padding:22px;
+  background:#102541;
+  border:1px solid var(--border);
+  border-radius:13px;
+}
+.skill-icon{
+  font-size:25px;
+  margin-bottom:8px;
+}
+.skill-card h3{
+  font-size:17px;
+  margin:0 0 8px;
+}
+.skill-card p{
+  color:var(--muted);
+  font-size:13px;
+  margin:0;
+}
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:14px;
+}
+.tag{
+  background:#193c61;
+  border:1px solid #315c83;
+  color:#d9ebff;
+  border-radius:5px;
+  padding:4px 9px;
+  font-size:11px;
+}
+
+/* EXPERIENCE */
+.experience-card{
+  border-left:4px solid var(--blue);
+}
+.date{
+  color:#72baff;
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+.company{
+  font-size:23px;
+  font-weight:bold;
+  margin:5px 0;
+}
+.designation{
+  color:#83baff;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+.experience-card ul li{margin-bottom:10px}
+
+/* CASE STUDIES AND PROJECTS */
+.project-number{
+  font-size:32px;
+  color:#62b6ff;
+  font-weight:900;
+}
+.project-card h3{margin-top:5px}
+.project-card p{line-height:1.7}
+.project-icon{font-size:35px;margin-bottom:10px}
+
+/* WORKFLOW */
+.workflow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:25px 0;
+}
+.workflow-item{
+  padding:13px;
+  background:#173b63;
+  border:1px solid #376b9c;
+  border-radius:8px;
+  color:#e8f4ff;
+  font-size:12px;
+  font-weight:bold;
+}
+.workflow-arrow{color:#66c4f5;font-size:22px}
+
+/* EDUCATION */
+.education-item{
+  border-left:3px solid #4a9bff;
+  margin-bottom:15px;
+}
+.education-item small{color:#7ebaff}
+
+/* CONTACT */
+.contact-section{
+  background:linear-gradient(120deg,#10365f,#09182d);
+}
+.contact-details{
+  background:#102541;
+  padding:25px;
+  border:1px solid var(--border);
+  border-radius:13px;
+}
+.contact-details p{
+  color:#c7d6e9;
+  margin:10px 0;
+  overflow-wrap:anywhere;
+}
+.contact-details a{color:#77bdff}
+.contact-details a:hover{text-decoration:underline}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#9fb3cb;
+  border-top:1px solid var(--border);
+  font-size:13px;
+}
+
+@media(max-width:900px){
+  .nav-links{gap:12px}
+  .nav-links a{font-size:11px}
+  .skill-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:750px){
+  .menu-btn{display:block}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#091a30;
+    padding:22px;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--border);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:14px}
+  .hero-content{
+    flex-direction:column;
+    text-align:center;
+  }
+  .hero-buttons{justify-content:center}
+  .grid,.grid-two{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:500px){
+  .container{width:92%}
+  .hero h1{font-size:40px}
+  .role{font-size:18px}
+  .hero-description{font-size:15px}
+  .skill-grid{grid-template-columns:1fr}
+  section{padding:65px 0}
+  .profile-photo{width:135px;height:135px;font-size:40px}
+  .workflow{gap:6px}
+  .workflow-item{font-size:10px}
+}
+@media print{
+  header,.hero-buttons{display:none}
+  body,section,.alternate,.contact-section{
+    background:white!important;color:#111!important
+  }
+  .hero{min-height:auto;padding:30px}
+  .hero h1,.section-title,.card h3{color:#111}
+  .hero-description,.card p,.card li{color:#333}
+  .card,.skill-card,.contact-details{
+    background:white;border:1px solid #aaa;
+    break-inside:avoid;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+<nav class="container">
+<a class="logo" href="#home">REDDY <span>GANESH</span></a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+
+<div class="nav-links" id="navigation">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#case-studies">Case Studies</a>
+<a href="#projects">Projects</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="hero" id="home">
+<div class="container hero-content">
+
+<div class="profile-photo">RG</div>
+
+<div>
+<div class="eyebrow">
+IT INFRASTRUCTURE | SUPPORT | CLOUD
+</div>
+
+<h1>Reddy Ganesh <span>Poojari</span></h1>
+
+<p class="role">
+IT Infrastructure Engineer | Windows Server Administrator
+</p>
+
+<p class="hero-description">
+IT Infrastructure and Support professional with 3 years of experience in enterprise Windows Server administration, VMware virtualisation, Active Directory, SCCM, infrastructure monitoring and IT operations.
+</p>
+
+<div class="hero-buttons">
+<a class="btn" href="#projects">View My Projects</a>
+<a class="btn white" href="#resume">View My Resume</a>
+<a class="btn gold" href="#about">⚡ About Me</a>
+</div>
+
+<div class="work-status">
+✓ Based in Ireland &nbsp; | &nbsp;
+Stamp 1G Graduate Permission &nbsp; | &nbsp;
+Open to IT Opportunities
+</div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+<div class="section-label">About Me</div>
+<h2 class="section-title">Building reliable enterprise IT environments.</h2>
+
+<p class="section-description">
+I am an IT Infrastructure professional with three years of experience at HCL Technologies, working in a MERCK client environment. My professional background focuses on Windows Server administration, virtualisation, infrastructure monitoring, patch management and enterprise IT operations.
+</p>
+
+<div class="grid grid-two">
+
+<div class="card">
+<h3>Professional Profile</h3>
+<p>
+Experienced in supporting Windows Server environments, managing Active Directory, Group Policy, DNS and DHCP, VMware vSphere, SCCM, monthly patch management and infrastructure troubleshooting.
+</p>
+<br>
+<p>
+I have also worked with PowerShell, Dynatrace, backup and recovery operations, Windows Failover Clustering, vulnerability remediation and ITIL-based service management.
+</p>
+<br>
+<p>
+I completed my MSc in Cloud Computing at National College of Ireland and continue developing my cloud and automation capabilities.
+</p>
+</div>
+
+<div class="card">
+<h3>Professional Highlights</h3>
+<div class="stats">
+<div class="stat">
+<strong>3 Years</strong>
+<small>Professional experience</small>
+</div>
+<div class="stat">
+<strong>2022–25</strong>
+<small>HCL Technologies</small>
+</div>
+<div class="stat">
+<strong>Windows</strong>
+<small>Server administration</small>
+</div>
+<div class="stat">
+<strong>VMware</strong>
+<small>Virtualisation</small>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="alternate" id="experience">
+<div class="container">
+
+<div class="section-label">Professional Experience</div>
+<h2 class="section-title">My Career Journey</h2>
+
+<div class="card experience-card">
+
+<div class="date">SEPTEMBER 2022 – JUNE 2025</div>
+
+<div class="company">HCL Technologies Limited</div>
+
+<div class="designation">
+Desktop / Windows Server Administrator
+</div>
+
+<p><strong>Client:</strong> MERCK</p>
+<p><strong>Location:</strong> Chennai, India</p>
+
+<ul>
+<li>Administered Windows Server 2008, 2008 R2, 2012, 2012 R2, 2016, 2019 and 2022 environments.</li>
+
+<li>Performed Windows server installation, configuration, administration, monitoring and routine maintenance.</li>
+
+<li>Managed Active Directory users, groups, access permissions and Group Policy activities.</li>
+
+<li>Worked with DNS and DHCP administration and troubleshooting.</li>
+
+<li>Supported VMware vSphere and vCenter virtual machine administration.</li>
+
+<li>Performed VM provisioning, snapshots, snapshot reverts, CPU and memory allocation and disk expansion.</li>
+
+<li>Handled monthly server patch management and patch verification activities.</li>
+
+<li>Supported SCCM client installation, client upgrades, communication troubleshooting and deployment activities.</li>
+
+<li>Used PowerShell commands and basic scripts for server administration, service monitoring, service restarts and operational tasks.</li>
+
+<li>Monitored server health, CPU, memory, disk utilisation and service availability using infrastructure monitoring tools including Dynatrace.</li>
+
+<li>Supported backup operations, restore activities and Disaster Recovery procedures.</li>
+
+<li>Worked on Windows Failover Clustering, node troubleshooting and failover operations.</li>
+
+<li>Handled infrastructure incidents, service requests and changes following ITIL processes and SLA requirements.</li>
+
+<li>Supported vulnerability remediation, security patching and server hardening activities.</li>
+
+<li>Maintained configuration records, CMDB documentation, SOPs and operational records.</li>
+
+<li>Coordinated with application, network, security and infrastructure teams to support service continuity.</li>
+</ul>
+
+<div class="tags">
+<span class="tag">Windows Server</span>
+<span class="tag">VMware</span>
+<span class="tag">Active Directory</span>
+<span class="tag">SCCM</span>
+<span class="tag">PowerShell</span>
+<span class="tag">Dynatrace</span>
+<span class="tag">ServiceNow</span>
+<span class="tag">ITIL</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+
+<div class="section-label">Technical Expertise</div>
+<h2 class="section-title">Skills & Technologies</h2>
+
+<p class="section-description">
+Technical capabilities across Windows infrastructure, server administration, virtualisation, endpoint management, monitoring, security and cloud technologies.
+</p>
+
+<div class="skill-grid">
+
+<div class="skill-card">
+<div class="skill-icon">🖥️</div>
+<h3>Windows Server Administration</h3>
+<p>Server installation, configuration, administration and maintenance.</p>
+<div class="tags">
+<span class="tag">Server 2008</span>
+<span class="tag">2008 R2</span>
+<span class="tag">2012</span>
+<span class="tag">2012 R2</span>
+<span class="tag">2016</span>
+<span class="tag">2019</span>
+<span class="tag">2022</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🔐</div>
+<h3>Active Directory & Networking</h3>
+<p>Identity, directory and network services administration.</p>
+<div class="tags">
+<span class="tag">Active Directory</span>
+<span class="tag">User Management</span>
+<span class="tag">Group Policy</span>
+<span class="tag">DNS</span>
+<span class="tag">DHCP</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">☁️</div>
+<h3>Virtualisation</h3>
+<p>Virtual machine administration and resource management.</p>
+<div class="tags">
+<span class="tag">VMware vSphere</span>
+<span class="tag">vCenter</span>
+<span class="tag">Hyper-V</span>
+<span class="tag">VM Provisioning</span>
+<span class="tag">Snapshots</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">⚙️</div>
+<h3>Endpoint & Patch Management</h3>
+<p>Endpoint configuration, software deployment and server patching.</p>
+<div class="tags">
+<span class="tag">SCCM</span>
+<span class="tag">Client Installation</span>
+<span class="tag">Client Upgrades</span>
+<span class="tag">Monthly Patching</span>
+<span class="tag">Patch Verification</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">📊</div>
+<h3>Monitoring & Troubleshooting</h3>
+<p>Infrastructure health checks and performance investigation.</p>
+<div class="tags">
+<span class="tag">Dynatrace</span>
+<span class="tag">CPU Monitoring</span>
+<span class="tag">Memory</span>
+<span class="tag">Disk Space</span>
+<span class="tag">Event Logs</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">⌨️</div>
+<h3>PowerShell & Automation</h3>
+<p>Operational scripting and administration tasks.</p>
+<div class="tags">
+<span class="tag">PowerShell</span>
+<span class="tag">Basic Scripting</span>
+<span class="tag">Service Monitoring</span>
+<span class="tag">Patch Verification</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🎫</div>
+<h3>ITSM & ITIL</h3>
+<p>Enterprise service management and incident handling.</p>
+<div class="tags">
+<span class="tag">ServiceNow</span>
+<span class="tag">Incident Management</span>
+<span class="tag">Problem Management</span>
+<span class="tag">Change Management</span>
+<span class="tag">SLA</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🔄</div>
+<h3>Backup & Disaster Recovery</h3>
+<p>Backup support, restore procedures and recovery operations.</p>
+<div class="tags">
+<span class="tag">Backup Operations</span>
+<span class="tag">Restore</span>
+<span class="tag">Disaster Recovery</span>
+<span class="tag">Failover</span>
+<span class="tag">Windows Clustering</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🛡️</div>
+<h3>Infrastructure Security</h3>
+<p>Server security, vulnerability and operational compliance.</p>
+<div class="tags">
+<span class="tag">Vulnerability Remediation</span>
+<span class="tag">Server Hardening</span>
+<span class="tag">Security Patching</span>
+<span class="tag">Audit Compliance</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">☁️</div>
+<h3>Cloud Technologies</h3>
+<p>Cloud platforms and infrastructure learning.</p>
+<div class="tags">
+<span class="tag">AWS EC2</span>
+<span class="tag">Azure Cloud</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">📁</div>
+<h3>Documentation & Operations</h3>
+<p>Infrastructure records and operational documentation.</p>
+<div class="tags">
+<span class="tag">CMDB</span>
+<span class="tag">SOP</span>
+<span class="tag">Documentation</span>
+<span class="tag">Inventory</span>
+<span class="tag">Vendor Coordination</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">💻</div>
+<h3>Operating Systems & Productivity</h3>
+<p>Client operating systems and business productivity environments.</p>
+<div class="tags">
+<span class="tag">Windows 10/11</span>
+<span class="tag">Microsoft 365</span>
+<span class="tag">macOS</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="alternate" id="case-studies">
+<div class="container">
+
+<div class="section-label">Case Studies</div>
+<h2 class="section-title">Infrastructure Operations in Practice</h2>
+
+<p class="section-description">
+Examples of the technical responsibilities and operational activities covered in my Windows infrastructure experience.
+</p>
+
+<div class="grid grid-two">
+
+<div class="card">
+<div class="project-number">01</div>
+<h3>Windows Server Administration</h3>
+<p>
+Server administration activities covering Windows Server installation, configuration, maintenance, monitoring, troubleshooting and patch management across enterprise environments.
+</p>
+<div class="tags">
+<span class="tag">Windows Server</span>
+<span class="tag">Patch Management</span>
+<span class="tag">Troubleshooting</span>
+</div>
+</div>
+
+<div class="card">
+<div class="project-number">02</div>
+<h3>VMware Virtualisation Operations</h3>
+<p>
+Virtual machine administration involving provisioning, snapshots, snapshot restoration, CPU and memory allocation, disk expansion and virtual infrastructure maintenance.
+</p>
+<div class="tags">
+<span class="tag">VMware vSphere</span>
+<span class="tag">vCenter</span>
+<span class="tag">VM Operations</span>
+</div>
+</div>
+
+<div class="card">
+<div class="project-number">03</div>
+<h3>Endpoint & Patch Management</h3>
+<p>
+SCCM client installation, upgrades, software deployment support and monthly Windows server patching activities with verification.
+</p>
+<div class="tags">
+<span class="tag">SCCM</span>
+<span class="tag">Patching</span>
+<span class="tag">Deployment</span>
+</div>
+</div>
+
+<div class="card">
+<div class="project-number">04</div>
+<h3>Infrastructure Monitoring</h3>
+<p>
+Monitoring system health, CPU and memory utilisation, disk capacity and service availability. Investigating alerts and coordinating incident resolution.
+</p>
+<div class="tags">
+<span class="tag">Dynatrace</span>
+<span class="tag">Monitoring</span>
+<span class="tag">PowerShell</span>
+</div>
+</div>
+
+<div class="card">
+<div class="project-number">05</div>
+<h3>Backup & Recovery Operations</h3>
+<p>
+Supporting backup and restoration activities, Disaster Recovery procedures and Windows Failover Cluster troubleshooting.
+</p>
+<div class="tags">
+<span class="tag">Backup</span>
+<span class="tag">Disaster Recovery</span>
+<span class="tag">Failover Clustering</span>
+</div>
+</div>
+
+<div class="card">
+<div class="project-number">06</div>
+<h3>Security & Compliance</h3>
+<p>
+Supporting security patching, vulnerability remediation, server hardening, infrastructure documentation and audit-related compliance activities.
+</p>
+<div class="tags">
+<span class="tag">Security</span>
+<span class="tag">Vulnerability</span>
+<span class="tag">Compliance</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+<div class="container">
+
+<div class="section-label">Technical Demonstration</div>
+<h2 class="section-title">My Infrastructure Troubleshooting Approach</h2>
+
+<p class="section-description">
+A simplified overview of the structured approach used when investigating infrastructure incidents.
+</p>
+
+<div class="card">
+
+<div class="workflow">
+<div class="workflow-item">Incident Reported</div>
+<span class="workflow-arrow">→</span>
+<div class="workflow-item">Impact Assessment</div>
+<span class="workflow-arrow">→</span>
+<div class="workflow-item">Troubleshooting</div>
+<span class="workflow-arrow">→</span>
+<div class="workflow-item">Resolution / Escalation</div>
+<span class="workflow-arrow">→</span>
+<div class="workflow-item">Documentation</div>
+</div>
+
+<p style="color:var(--muted);font-size:14px">
+Typical investigation checks include Windows services, event logs, server resource utilisation, network connectivity, recent changes, monitoring alerts and system health. Actions are performed according to access permissions, change approvals and operational procedures.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="alternate" id="projects">
+<div class="container">
+
+<div class="section-label">Academic & Technical Projects</div>
+<h2 class="section-title">Projects & Practical Learning</h2>
+
+<p class="section-description">
+Academic research and cloud computing projects completed or developed during my technical learning journey.
+</p>
+
+<div class="grid grid-two">
+
+<div class="card project-card">
+<div class="project-icon">☁️</div>
+<h3>Multi-Cloud Deployment Strategies</h3>
+<p>
+Research project investigating multi-cloud deployment strategies and their impact on system reliability and failure recovery. Used a multi-cloud service composition dataset and explored machine learning classification with Python and Logistic Regression.
+</p>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">Machine Learning</span>
+<span class="tag">Logistic Regression</span>
+<span class="tag">Cloud Computing</span>
+</div>
+</div>
+
+<div class="card project-card">
+<div class="project-icon">🏗️</div>
+<h3>SiteTrack – Construction Equipment Tracking</h3>
+<p>
+Academic cloud application project focused on construction equipment tracking, using a Python Flask application and AWS cloud architecture.
+</p>
+<div class="tags">
+<span class="tag">Python Flask</span>
+<span class="tag">AWS S3</span>
+<span class="tag">DynamoDB</span>
+<span class="tag">Lambda</span>
+<span class="tag">API Gateway</span>
+</div>
+</div>
+
+<div class="card project-card">
+<div class="project-icon">⚙️</div>
+<h3>Infrastructure Automation Learning</h3>
+<p>
+Developing practical knowledge of infrastructure as code, cloud provisioning, containerisation and deployment automation through technical exercises.
+</p>
+<div class="tags">
+<span class="tag">Terraform</span>
+<span class="tag">Docker</span>
+<span class="tag">Kubernetes</span>
+<span class="tag">Jenkins</span>
+</div>
+</div>
+
+<div class="card project-card">
+<div class="project-icon">🖥️</div>
+<h3>Windows Server Administration Lab</h3>
+<p>
+Practical learning in Windows Server administration, Active Directory, Group Policy, DNS, DHCP, monitoring and PowerShell operational commands.
+</p>
+<div class="tags">
+<span class="tag">Windows Server</span>
+<span class="tag">Active Directory</span>
+<span class="tag">PowerShell</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- RESUME AND EDUCATION -->
+<section id="resume">
+<div class="container">
+
+<div class="section-label">Resume & Education</div>
+<h2 class="section-title">Academic Background</h2>
+
+<div class="grid grid-two">
+
+<div class="card education-item">
+<small>POSTGRADUATE EDUCATION</small>
+<h3>MSc Cloud Computing</h3>
+<p>National College of Ireland</p>
+<p>Dublin, Ireland</p>
+</div>
+
+<div class="card education-item">
+<small>UNDERGRADUATE EDUCATION</small>
+<h3>B.Tech Electronics & Communication Engineering</h3>
+<p>Annamacharya Institute of Technology and Science</p>
+<p>Tirupathi, India | 2018 – 2022</p>
+</div>
+
+</div>
+
+<br>
+
+<div class="card">
+<h3>Professional Summary</h3>
+<p>
+Three years of IT Infrastructure and Windows Server Administration experience with HCL Technologies, supporting the MERCK client environment. Core experience includes Windows Server, Active Directory, VMware, SCCM, patch management, monitoring, PowerShell, backup and recovery, and ITIL service operations.
+</p>
+<br>
+<button class="btn" onclick="window.print()">
+Print / Save Portfolio as PDF
+</button>
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="alternate" id="certifications">
+<div class="container">
+
+<div class="section-label">Professional Development</div>
+<h2 class="section-title">Certifications & Continuous Learning</h2>
+
+<p class="section-description">
+Technical areas of professional development. Learning areas are not represented as completed certifications.
+</p>
+
+<div class="grid grid-two">
+
+<div class="card">
+<h3>IT Service Management</h3>
+<p>ITIL concepts, incident management, change management and SLA-based service delivery.</p>
+</div>
+
+<div class="card">
+<h3>AWS Cloud Technologies</h3>
+<p>Cloud infrastructure concepts and practical learning in AWS EC2 and related cloud services.</p>
+</div>
+
+<div class="card">
+<h3>Microsoft Azure</h3>
+<p>Cloud infrastructure and Azure platform learning.</p>
+</div>
+
+<div class="card">
+<h3>Infrastructure Automation</h3>
+<p>Continuing technical learning in Terraform, Docker, Kubernetes and Jenkins.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+<div class="container">
+
+<div class="section-label">Contact Me</div>
+<h2 class="section-title">Let's Connect</h2>
+
+<p class="section-description">
+I am interested in IT Infrastructure, Windows Server Administration, Desktop Support, System Administration, Cloud Support and IT Operations opportunities in Ireland.
+</p>
+
+<div class="contact-details">
+
+<p><strong>Name:</strong> Reddy Ganesh Poojari</p>
+
+<p><strong>Location:</strong> Ireland</p>
+
+<p><strong>Work Permission:</strong> Stamp 1G Graduate Permission</p>
+
+<p><strong>Email:</strong>
+<a href="mailto:Poojarireddyganesh25836@gmail.com">
+Poojarireddyganesh25836@gmail.com
+</a>
+</p>
+
+<p><strong>Phone:</strong>
+<a href="tel:+353838900989">+353 83 890 0989</a>
+</p>
+
+<p><strong>LinkedIn:</strong>
+<a href="https://www.linkedin.com/in/reddy-ganesh-poojari-384aa0381/" target="_blank">
+View My LinkedIn Profile ↗
+</a>
+</p>
+
+<p><strong>GitHub:</strong>
+<a href="https://github.com/reddyganeshp" target="_blank">
+github.com/reddyganeshp ↗
+</a>
+</p>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+© 2026 Reddy Ganesh Poojari |
+IT Infrastructure Engineer |
+Ireland
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navigation").classList.toggle("open");
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+  link.addEventListener("click",function(){
+    document.getElementById("navigation").classList.remove("open");
+  });
+});
+</script>
+
+</body>
+</html>
