@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,21 +109,16 @@ nav{
   margin:auto;
 }
 .profile-photo{
-  object-fit: cover;
-  padding: 0;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  padding:0;
   width:165px;
   height:165px;
   flex-shrink:0;
   border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(145deg,#54d1ed,#2868c7 65%,#102c58);
   border:5px solid rgba(255,255,255,.2);
   box-shadow:0 20px 55px #0008;
-  font-size:48px;
-  font-weight:900;
-  letter-spacing:-3px;
 }
 .eyebrow{
   color:#82c7ff;
@@ -418,7 +412,7 @@ footer{
   .hero-description{font-size:15px}
   .skill-grid{grid-template-columns:1fr}
   section{padding:65px 0}
-  .profile-photo{width:135px;height:135px;font-size:40px}
+  .profile-photo{width:135px;height:135px}
   .workflow{gap:6px}
   .workflow-item{font-size:10px}
 }
@@ -468,7 +462,7 @@ footer{
 
 <img
   class="profile-photo"
-  src="profile.jpg"
+  src="./profile.jpg"
   alt="Reddy Ganesh Poojari"
 >
 
@@ -617,7 +611,6 @@ Desktop / Windows Server Administrator
 <span class="tag">SCCM</span>
 <span class="tag">PowerShell</span>
 <span class="tag">Dynatrace</span>
-<span class="tag">ServiceNow</span>
 <span class="tag">ITIL</span>
 </div>
 
@@ -722,7 +715,6 @@ Technical capabilities across Windows infrastructure, server administration, vir
 <h3>ITSM & ITIL</h3>
 <p>Enterprise service management and incident handling.</p>
 <div class="tags">
-<span class="tag">ServiceNow</span>
 <span class="tag">Incident Management</span>
 <span class="tag">Problem Management</span>
 <span class="tag">Change Management</span>
